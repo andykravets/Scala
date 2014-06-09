@@ -143,7 +143,7 @@ class Empty extends TweetSet {
    */
   override def mostRetweeted: Tweet = throw new NoSuchElementException()
 
-  override def isEmpty(): Boolean = true
+  override def isEmpty: Boolean = true
 }
 
 class NonEmpty(elem: Tweet, left: TweetSet, right: TweetSet) extends TweetSet {

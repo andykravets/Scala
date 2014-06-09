@@ -1,5 +1,4 @@
-import week4.{Nil, Cons}
-
+/*
 def singleton[T](elem: T) = new Cons[T](elem, new Nil[T])
 
 def nth[T](position: Int, list: List[T]): T = {
@@ -9,5 +8,17 @@ def nth[T](position: Int, list: List[T]): T = {
 }
 
 val list = new Cons(1, new Cons(2, new Cons(3, new Nil)))
-nth(2, list)
-nth(-1, list)
+*/
+def insert(x: Int, xs: List[Int]): List[Int] = xs match {
+  case List() => List(x)
+  case y::ys => if(x <= y) x :: xs else y :: insert(x, ys)
+}
+
+def isort(xs: List[Int]): List[Int] = xs match {
+  case List() => List()
+  case y :: ys => insert(y, isort(ys))
+}
+
+
+
+
