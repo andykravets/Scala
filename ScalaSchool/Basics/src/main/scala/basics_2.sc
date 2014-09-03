@@ -1,10 +1,9 @@
-/*
 class Foo
 
 object FooMaker {
   def apply() = new Foo
 }
-*/
+
 
 class Bar {
   def apply() = 0
